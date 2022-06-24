@@ -9,4 +9,4 @@ RUN chmod +x ./dynhost.sh
 
 RUN ln -sf /usr/src/app/dynhost.sh /etc/periodic/15min/dynhost
 
-CMD ["crond", "-f"]
+CMD ["sh", "-c", "/usr/src/app/dynhost.sh; crond -f"]
